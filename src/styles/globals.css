@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 226, 214, 169;
+  --background-start-rgb: 26, 26, 26;
+  --background-end-rgb: 18, 18, 18;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+}
+
+@layer components {
+  .elden-heading {
+    @apply font-display text-elden-gold uppercase tracking-wider;
+  }
+  
+  .elden-link {
+    @apply text-elden-gold hover:text-elden-light transition-colors duration-200;
+  }
+  
+  .elden-button {
+    @apply bg-elden-gold/10 border border-elden-gold/40 text-elden-gold hover:bg-elden-gold/20 
+    hover:border-elden-gold transition-all duration-200 px-4 py-2 rounded-sm;
+  }
+  
+  .elden-container {
+    @apply max-w-5xl mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .elden-card {
+    @apply bg-elden-darker border border-elden-gold/30 rounded-md p-6 shadow-lg;
+  }
+} 
